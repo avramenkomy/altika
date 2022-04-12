@@ -25,7 +25,6 @@ REACT_APP_PATH = os.path.join(BASE_DIR.parent, 'altika_frontend') # корень
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-l+d#jipt&$5*4y8gwvlozd7nz8%gctx1!qp+#v5k%4j+q9s_rw'
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
