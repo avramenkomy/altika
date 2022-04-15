@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Box, Button, Typography } from '@material-ui/core';
 import CallIcon from '@material-ui/icons/Call';
 import EmailIcon from '@material-ui/icons/Email';
 import { makeStyles } from '@material-ui/core/styles';
+
+import FeedbackModal from '../../../services/elements/FeedbackModal';
+
 import './callUs.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,12 +24,22 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CallUs() {
   const classes = useStyles();
+  const [openFeedbackModal, setOpenFeedbackModal] = useState(false);
+
+  const handleCloseFeedbackModal = () => {
+    setOpenFeedbackModal(false);
+  }
+
+  const handleOpenFeedbackModal = () => {
+    setOpenFeedbackModal(true);
+  }
 
   return (
     <div className={classes.root}>
+      <FeedbackModal open={openFeedbackModal} onClose = {handleCloseFeedbackModal} />
       <Grid container alignItems="center">
         <Grid item>
-          <Button color="inherit" variant="outlined" style={{ marginRight: '5px'}}>Заказать звонок</Button>
+          <Button onClick={handleOpenFeedbackModal} color="inherit" variant="outlined" style={{ marginRight: '5px'}}>Заказать звонок</Button>
         </Grid>
         <Grid item>
           <Box className={classes.wrapperContacts}>
@@ -39,14 +52,6 @@ export default function CallUs() {
           </Box>
         </Grid>
       </Grid>
-
-
-        {/*<Button color="inherit" variant="outlined">Перезвоните мне</Button>*/}
-
-        {/*<Box>*/}
-        {/*  <Box><CallIcon /></Box>*/}
-        {/*  <Box><EmailIcon /></Box>*/}
-        {/*</Box>*/}
     </div>
   )
 }
