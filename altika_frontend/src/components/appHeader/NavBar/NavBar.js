@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavBar() {
   const classes = useStyles();
-  const preventDefault = (event) => event.preventDefault();
+
   const widthMore800 = useMediaQuery('(min-width:800px)');
 
   const rootStyle = clsx({
@@ -34,24 +34,24 @@ export default function NavBar() {
     <Toolbar disableGutters className={classes.root}>
       <Grid container className={rootStyle} alignContent="center" alignItems="center">
         <Grid item xs={12} md={3}>
-            <AnchorLink className={classes.link} offset='100' href="#about">
-              <Typography variant="h6">О нас</Typography>
-            </AnchorLink>
+          <AnchorLink className={classes.link} offset='100' href="#about">
+            <Typography variant="h6">О нас</Typography>
+          </AnchorLink>
         </Grid>
         <Grid item xs={12} md={3}>
-            <AnchorLink className={classes.link} offset='100' href="#services">
-              <Typography variant="h6">Услуги</Typography>
-            </AnchorLink>
+          <AnchorLink className={classes.link} offset='100' href="#services">
+            <Typography variant="h6">Услуги</Typography>
+          </AnchorLink>
         </Grid>
         <Grid item xs={12} md={3}>
-            <AnchorLink className={classes.link} offset='100' href="#expertise_types">
-              <Typography variant="h6">Виды экспертиз</Typography>
-            </AnchorLink>
+          <AnchorLink className={classes.link} offset='100' href="#expertise_types">
+            <Typography variant="h6">Виды экспертиз</Typography>
+          </AnchorLink>
         </Grid>
         <Grid item xs={12} md={3}>
           <AnchorLink className={classes.link} offset='100' href="#contacts">
-              <Typography variant="h6">Контакты</Typography>
-            </AnchorLink>
+            <Typography variant="h6">Контакты</Typography>
+          </AnchorLink>
         </Grid>
       </Grid>
     </Toolbar>
