@@ -1,4 +1,5 @@
 /** Механизм валидации вводимы данных */
+import validator from 'validator';
 
 
 export default function validate(value_type, value) {
@@ -62,24 +63,37 @@ class Validation {
   }
 
   _string() {
-    if (this.value.length > 100) {
+    if (this.value.length > 60) {
       this.state = false;
-      this.error_message = 'Максимально кол-во символов 100';
+      this.error_message = 'Максимально кол-во символов 60';
     } else if (this.value.length === 0 || this.value.length === '') {
       this.state = false;
-      this.error_message = 'Поле "Имя" не должно быть пустым'
+      this.error_message = 'Поле не должно быть пустым'
+    } else if (!validator.isAlpha(this.value, 'ru-RU') && !validator.isAlpha(this.value, 'en-US')) {
+      this.state = false;
+      this.error_message = 'Поле должно содержать только буквы одного алфавита'
+    }
+  }
+
+  _bigString() {
+    if (this.value.length > 500) {
+      this.state = false;
+      this.error_message = 'Максимально кол-во символов 300';
+    } else if (this.value.length === 0 || this.value.length === '') {
+      this.state = false;
+      this.error_message = 'Поле не должно быть пустым'
     }
   }
 
   _phone() {
-    if (this.value.length < 11) {
+    if (!validator.isMobilePhone(this.value, ['ru-RU'])) {
       this.state = false;
       this.error_message = 'Некорректный номер телефона'
     }
   }
 
   _email() {
-    if ((this.value.indexOf('@') === 0) || !(this.value.includes('@')) || (this.value.match(/@/g || []).length > 1) || !(this.value.includes('.')) || (this.value.lastIndexOf('.') - this.value.indexOf('@') < 2) || (this.value.length - 2) - this.value.lastIndexOf('.') < 1) {
+    if (!validator.isEmail(this.value)) {
       this.state = false;
       this.error_message = 'Некорректный адрес электронной почты'
     }
