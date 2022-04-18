@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-
+import React from 'react';
 import AppHeader from './components/appHeader/AppHeader';
 import About from './components/about/About';
 import Intro from './components/intro/Intro';
@@ -15,60 +13,18 @@ import Notes from './components/notes/Notes';
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const theme = createTheme({
-    palette: {
-      type: darkMode ? 'dark' : 'light',
-      primary: {
-        light: '#508BB6',
-        main: '#256EA4',
-        dark: '#006EAA',
-        contrastText: '#F0F0F1'
-      },
-      secondary: {
-        light: '#FFF',
-        main: '#E0E1E2',
-        dark: '#F0F0F1',
-        contrastText: '#000'
-      },
-    },
-    typography: {
-      h2: {
-        '@media (max-width: 501px)': {
-          fontSize: '40px',
-        },
-        '@media (max-width: 401px)': {
-          fontSize: '30px',
-        },
-        '@media (max-width: 301px)': {
-          fontSize: '20px',
-        },
-      },
-      h6: {
-        fontSize: '1rem',
-        '@media (min-width: 1280px)': {
-          fontSize: '1.25rem',
-        },
-        '@media (min-width: 1920px)': {
-          fontSize: '1.5rem',
-        }
-      }
-    }
-  });
-
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <div id="header" />
-      <AppHeader darkTheme={darkMode} onChangeTheme={setDarkMode} />
+      <AppHeader />
       <main>
         <Intro />
         <div id="about" />
-        <About darkTheme={darkMode} />
+        <About />
         <div id="expertise_types" />
         <ExpertiseTypes />
         <div id="services" />
-        <Services darkMode={darkMode} />
+        <Services />
         <StepByWork />
         <ReasonsForExpertise />
         <License />
@@ -79,7 +35,7 @@ function App() {
         <div id='contacts' />
         <FooterComponent />
       </footer>
-    </ThemeProvider>
+    </>
   );
 }
 
