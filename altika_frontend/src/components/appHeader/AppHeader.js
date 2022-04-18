@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { AppBar, IconButton } from '@material-ui/core';
+import React from 'react';
+import { AppBar } from '@material-ui/core';
 import { Grid } from '@mui/material';
-import Brightness4Icon from '@material-ui/icons/Brightness4';
-import Brightness5Icon from '@material-ui/icons/Brightness5';
 import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
@@ -32,14 +30,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function AppHeader(props) {
-  const [dark, setDark] = useState(props.darkTheme);
+function AppHeader() {
   const matches960 = useMediaQuery('(min-width:960px)');
-
-  const handleChangeTheme = () => {
-    setDark(!dark);
-    props.onChangeTheme(!dark);
-  }
 
   const classes = useStyles();
     return (
@@ -57,14 +49,6 @@ function AppHeader(props) {
           <Grid className={classes.callUs}>
             <CallUs />
           </Grid>
-
-          { matches960 &&
-            <Grid item className={classes.darkThemeButton}>
-              <IconButton onClick={handleChangeTheme}>
-                { dark ? <Brightness4Icon color="secondary" /> : <Brightness5Icon color="secondary" /> }
-              </IconButton>
-            </Grid>
-          }
         </Grid>
       </AppBar>
     )
