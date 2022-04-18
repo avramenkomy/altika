@@ -8,6 +8,7 @@ import CheckIcon from '@material-ui/icons/Check';
 import ErrorIcon from '@material-ui/icons/Error';
 import { makeStyles, alpha } from '@material-ui/core/styles';
 import { green, red } from '@material-ui/core/colors';
+import OutsideSnackbar from '../elements/OutsideSnackbar';
 
 import Backdrop from './Backdrop';
 import validation from '../tackles/validation';
@@ -201,9 +202,10 @@ function FeedbackModal(props) {
       if (result) {
         console.log('Сообщение доставлено');
         clearState();
-        props.onClose()
+        props.onClose();
+        OutsideSnackbar.success('Заявка успешно отправлена')
       } else {
-        alert('Что-то пошло не так')
+        OutsideSnackbar.error('что-то пошло не так')
       }
     }
   }
