@@ -1,7 +1,6 @@
-import { useSnackbar, WithSnackbarProps } from 'notistack';
-import React from 'react';
+import { useSnackbar } from 'notistack';
 
-let useSnackbarRef: WithSnackbarProps;
+let useSnackbarRef;
 export const SnackbarUtilsConfigurator = () => {
   useSnackbarRef = useSnackbar();
   return null
