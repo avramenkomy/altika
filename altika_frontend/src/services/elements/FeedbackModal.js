@@ -205,7 +205,8 @@ function FeedbackModal(props) {
         props.onClose();
         OutsideSnackbar.success('Заявка успешно отправлена')
       } else {
-        OutsideSnackbar.error('что-то пошло не так')
+        setLoader(false);
+        setDisableSubmit(false);
       }
     }
   }
