@@ -31,13 +31,15 @@ def sender(subject, message, from_mail, to_mails_list):
 
 
 @api_view(['POST'])
-def email_call_us(request):
+def feedback_email(request):
     if request.method == 'POST':
-        subject = 'Перезвонить клиенту'
+        subject = request.data['subject']
         message = f'''Перезвонить клиенту!!!
-            Имя: {request.data['userName']}
+            Имя: {request.data['name']}
             email: {request.data['email']}
-            Тел.№{request.data['phone']}'''
+            Тел.№{request.data['phone']}\n'''
+        if 'details' in request.data:
+            message = message + '\t' + f"Подробности: {request.data['details']}"
         from_mail = EMAIL_HOST_USER
         to_mails_list = ['test_for_skillfactory@mail.ru']
         send_status = sender(subject, message, from_mail, to_mails_list)
