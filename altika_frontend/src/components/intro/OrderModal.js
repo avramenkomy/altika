@@ -1,3 +1,4 @@
+// Deprecated component
 import React, { useState } from 'react';
 import { Grid, Button, Dialog, IconButton, Typography, TextField } from '@material-ui/core';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: '#fff',
     },
-    '&$focused': {
+    '&:focused': {
       backgroundColor: '#fff',
       boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 2px`,
       borderColor: theme.palette.primary.main,

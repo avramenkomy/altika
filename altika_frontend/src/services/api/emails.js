@@ -1,24 +1,20 @@
 import axios from 'axios';
+import OutsideSnackbar from '../elements/OutsideSnackbar';
 
 axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 
-async function sendCallUs (props) {
-    const {userName, email, phone} = props
-    try {
-      let response = await axios.post('/send/', {
-        userName,
-        email,
-        phone
-      });
-      return response;
-    } catch (error) {
-      alert(`что-то пошло не так ${error}`); // TODO: сделать обработку ошибок
-    }
+async function send(params) {
+  try {
+    let response = await axios.post('/send/', params);
+    return response;
+  } catch (error) {
+    OutsideSnackbar.error(`Что-то пошло не так ${error}`)
+  }
 }
 
 const exportData = {
-    sendCallUs,
+  send
 };
 
 export default exportData;

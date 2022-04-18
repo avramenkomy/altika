@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Grid, Paper, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import OrderModal from './OrderModal';
+import FeedbackModal from '../../services/elements/FeedbackModal';
 
 import decoration from '../../resources/img/background_image/expert_man.jpeg';
 
@@ -48,15 +48,20 @@ const useStyles = makeStyles((theme) => ({
 function Intro () {
   const classes = useStyles();
 
-  const [openModal, setOpenModal] = React.useState(false);
+  const [openFeedbackModal, setOpenFeedbackModal] = useState(false);
 
-  const handleCloseModal = () => {
-    setOpenModal(false);
+  const handleCloseFeedbackModal = () => {
+    setOpenFeedbackModal(false);
+  }
+
+  const handleOpenFeedbackModal = () => {
+    setOpenFeedbackModal(true);
   }
 
   return (
     <>
-      <OrderModal open={openModal} onClose={handleCloseModal} />
+      {/* <OrderModal open={openModal} onClose={handleCloseModal} /> */}
+      <FeedbackModal open={openFeedbackModal} onClose = {handleCloseFeedbackModal} withDetails />
       <Paper className={classes.root}>
         <Container>
           <div className={classes.dark_shadow} />
@@ -75,7 +80,7 @@ function Intro () {
             </Grid>
 
             <Grid item md={6} className={classes.items}>
-              <Button className={classes.actionBtn} onClick={ () => setOpenModal(true) } variant="contained" color="secondary" size="large">Оставить заявку</Button>
+              <Button className={classes.actionBtn} onClick={ () => handleOpenFeedbackModal(true) } variant="contained" color="secondary" size="large">Оставить заявку</Button>
               <Typography variant="body2" component="div" color="secondary" gutterBottom paragraph>
                 Или просто оставьте заявку на сайте
               </Typography>
