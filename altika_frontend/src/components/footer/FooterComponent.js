@@ -47,7 +47,7 @@ function FooterComponent() {
           </Hidden>
         </Grid>
 
-        <Grid item sm={6} md={3} justifyContent="center">
+        <Grid item sm={6} md={3} container justifyContent="center">128/85
           <ContactsComponent />
         </Grid>
 
