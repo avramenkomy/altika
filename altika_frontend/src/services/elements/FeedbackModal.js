@@ -10,6 +10,7 @@ import { makeStyles, alpha } from '@material-ui/core/styles';
 import { green, red } from '@material-ui/core/colors';
 import OutsideSnackbar from '../elements/OutsideSnackbar';
 
+import DocumentModal from './DocumentModal';
 import Backdrop from './Backdrop';
 import validation from '../tackles/validation';
 import useComponentDidMount from '../elements/CustomHooks';
@@ -58,6 +59,13 @@ const useStyles = makeStyles((theme) => ({
   },
   btnName: {
     flexGrow: '1'
+  },
+  approval: {
+    textDecoration: 'underline',
+    color: '#256EA4',
+    '&:hover': {
+      cursor: 'pointer'
+    }
   }
 }));
 
@@ -95,6 +103,8 @@ function FeedbackModal(props) {
   const [backdropName, setBackdropName] = useState(false);
   const [backdropEmail, setBackdropEmail] = useState(false);
   const [backdropPhone, setBackdropPhone] = useState(false);
+
+  const [submodal, setSubmodal] = useState(false);
 
   useEffect(() => {
     if (isMounted) {
@@ -211,119 +221,130 @@ function FeedbackModal(props) {
     }
   }
 
+  const handleCloseSubModal = () => {
+    setSubmodal(false);
+  }
+
+  const handleOpenSubModal = () => {
+    setSubmodal(true);
+  }
+
   return(
-    <Dialog open={props.open} onClose={props.onClose} className={classes.root} maxWidth={'xs'}>
-      <Title classes={classes} onClose={props.onClose}>
-        Заказать&nbsp;звонок
-      </Title>
-      <DialogContent className={classes.contentRoot} dividers>
-        <Grid container direction="column">
-          <Grid item xs={12} className={classes.items}>
-            <TextField
-              label="Введите имя"
-              variant="filled"
-              size="small"
-              className={classes.textField}
-              InputProps={{
-                disableUnderline: true,
-                endAdornment: (
-                  <InputAdornment position="end">
-                    {backdropName && <Backdrop size={20} color="gray" />}
-                    {!backdropName && nameError && <ErrorIcon style={{ color: red[500], fontSize: 25 }} />}
-                    {!backdropName && !nameError && name !== '' && <CheckIcon style={{ color: green[700], fontSize: 25 }} />}
-                  </InputAdornment>
-                )
-              }}
-              value={name}
-              onChange={handleNameChange}
-              error={nameError}
-              fullWidth
-            />
+    <>
+      <DocumentModal open={submodal} onClose={handleCloseSubModal} scroll="paper" />
+      <Dialog open={props.open} onClose={props.onClose} className={classes.root} maxWidth={'xs'}>
+        <Title classes={classes} onClose={props.onClose}>
+          Заказать&nbsp;звонок
+        </Title>
+        <DialogContent className={classes.contentRoot} dividers>
+          <Grid container direction="column">
+            <Grid item xs={12} className={classes.items}>
+              <TextField
+                label="Введите имя"
+                variant="filled"
+                size="small"
+                className={classes.textField}
+                InputProps={{
+                  disableUnderline: true,
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      {backdropName && <Backdrop size={20} color="gray" />}
+                      {!backdropName && nameError && <ErrorIcon style={{ color: red[500], fontSize: 25 }} />}
+                      {!backdropName && !nameError && name !== '' && <CheckIcon style={{ color: green[700], fontSize: 25 }} />}
+                    </InputAdornment>
+                  )
+                }}
+                value={name}
+                onChange={handleNameChange}
+                error={nameError}
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12} className={classes.items}>
+              <TextField
+                label="Введите email"
+                variant="filled"
+                size="small"
+                className={classes.textField}
+                InputProps={{
+                  disableUnderline: true,
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      {backdropEmail && <Backdrop size={20} color="gray" />}
+                      {!backdropEmail && emailError && <ErrorIcon style={{ color: red[500], fontSize: 25 }} />}
+                      {!backdropEmail && !emailError && email !== '' && <CheckIcon style={{ color: green[700], fontSize: 25 }} />}
+                    </InputAdornment>
+                  )
+                }}
+                value={email}
+                onChange={handleEmailChange}
+                error={emailError}
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12} className={classes.items}>
+              <TextField
+                label="Введите номер телефона"
+                variant="filled"
+                size="small"
+                className={classes.textField}
+                InputProps={{
+                  disableUnderline: true,
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      {backdropPhone && <Backdrop size={20} color="gray" />}
+                      {!backdropPhone && phoneError && <ErrorIcon style={{ color: red[500], fontSize: 25 }} />}
+                      {!backdropPhone && !phoneError && phone !== '' && <CheckIcon style={{ color: green[700], fontSize: 25 }} />}
+                    </InputAdornment>
+                  )
+                }}
+                value={phone}
+                onChange={handlePhoneChange}
+                error={phoneError}
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12} className={classes.items}>
+              {props.withDetails && <TextField
+                label="Кратко опишите суть вопроса"
+                variant="filled"
+                size="small"
+                className={classes.textField}
+                value={details}
+                onChange={handleDetailsChange}
+                multiline
+                minRows={5}
+                InputProps={{
+                  disableUnderline: true,
+                }}
+                fullWidth
+              />}
+            </Grid>
           </Grid>
-          <Grid item xs={12} className={classes.items}>
-            <TextField
-              label="Введите email"
-              variant="filled"
-              size="small"
-              className={classes.textField}
-              InputProps={{
-                disableUnderline: true,
-                endAdornment: (
-                  <InputAdornment position="end">
-                    {backdropEmail && <Backdrop size={20} color="gray" />}
-                    {!backdropEmail && emailError && <ErrorIcon style={{ color: red[500], fontSize: 25 }} />}
-                    {!backdropEmail && !emailError && email !== '' && <CheckIcon style={{ color: green[700], fontSize: 25 }} />}
-                  </InputAdornment>
-                )
-              }}
-              value={email}
-              onChange={handleEmailChange}
-              error={emailError}
-              fullWidth
-            />
+        </DialogContent>
+        <DialogActions>
+          <Grid container direction="column" className={classes.itemAction}>
+            <Grid item xs={12}>
+              <Button
+                fullWidth
+                variant="contained"
+                color="primary"
+                onClick={handleClick}
+                disabled={disableSubmit}
+                endIcon={loader && <CustomLoader />}
+              >
+                <span className={classes.btnName}>Отправить</span>
+              </Button>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography variant="caption" component="p">
+                Нажимая кнопку отправить, Вы даете <span className={classes.approval} onClick={handleOpenSubModal}>согласие на обработку персональных данных</span>
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item xs={12} className={classes.items}>
-            <TextField
-              label="Введите номер телефона"
-              variant="filled"
-              size="small"
-              className={classes.textField}
-              InputProps={{
-                disableUnderline: true,
-                endAdornment: (
-                  <InputAdornment position="end">
-                    {backdropPhone && <Backdrop size={20} color="gray" />}
-                    {!backdropPhone && phoneError && <ErrorIcon style={{ color: red[500], fontSize: 25 }} />}
-                    {!backdropPhone && !phoneError && phone !== '' && <CheckIcon style={{ color: green[700], fontSize: 25 }} />}
-                  </InputAdornment>
-                )
-              }}
-              value={phone}
-              onChange={handlePhoneChange}
-              error={phoneError}
-              fullWidth
-            />
-          </Grid>
-          <Grid item xs={12} className={classes.items}>
-            {props.withDetails && <TextField
-              label="Кратко опишите суть вопроса"
-              variant="filled"
-              size="small"
-              className={classes.textField}
-              value={details}
-              onChange={handleDetailsChange}
-              multiline
-              minRows={5}
-              InputProps={{
-                disableUnderline: true,
-              }}
-              fullWidth
-            />}
-          </Grid>
-        </Grid>
-      </DialogContent>
-      <DialogActions>
-        <Grid container direction="column" className={classes.itemAction}>
-          <Grid item xs={12}>
-            <Button
-              fullWidth
-              variant="contained"
-              color="primary"
-              onClick={handleClick}
-              disabled={disableSubmit}
-              endIcon={loader && <CustomLoader />}
-            >
-              <span className={classes.btnName}>Отправить</span>
-            </Button>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="caption" component="p">
-              Нажимая кнопку отправить, Вы даете согласие на обработку персональных данных и бла-бла-бла...
-            </Typography>
-          </Grid>
-        </Grid>
-      </DialogActions>
-    </Dialog>
+        </DialogActions>
+      </Dialog>
+    </>
   )
 }
 
