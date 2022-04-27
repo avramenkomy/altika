@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Typography, Divider, Button, Container, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import './ServiceCard.css';
-import OrderModal from '../intro/OrderModal';
+import FeedbackModal from '../../services/elements/FeedbackModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,18 +46,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function ServiceCard({title, price, description, url, darkMode}) {
+function ServiceCard({title, price, description, url}) {
   const classes = useStyles();
 
-  const [openModal, setOpenModal] = React.useState(false);
+  const [openFeedbackModal, setOpenFeedbackModal] = useState(false);
 
-  const handleCloseModal = () => {
-    setOpenModal(false);
+  const handleCloseFeedbackModal = () => {
+    setOpenFeedbackModal(false);
+  }
+
+  const handleOpenFeedbackModal = () => {
+    setOpenFeedbackModal(true);
   }
 
   return (
     <div className={classes.root}>
-      <OrderModal open={openModal} onClose={handleCloseModal} />
+      <FeedbackModal open={openFeedbackModal} onClose = {handleCloseFeedbackModal} withDetails subject={title}/>
       <Container>
         <div className="wrapper">
           <div className="container_1">
@@ -71,7 +75,7 @@ function ServiceCard({title, price, description, url, darkMode}) {
           </div>
           <Divider />
           <div className={classes.actionBtn}>
-            <Button onClick={ () => setOpenModal(true) } variant="contained" color="primary" size="small">Оставить заявку</Button>
+            <Button onClick={ () => handleOpenFeedbackModal(true) } variant="contained" color="primary" size="small">Оставить заявку</Button>
           </div>
           </div>
           
