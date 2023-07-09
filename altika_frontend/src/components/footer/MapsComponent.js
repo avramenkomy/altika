@@ -19,10 +19,13 @@ function MapsComponent({width, height}) {
         title="openstreetmap"
         width={width}
         height={height}
-        frameBorder="0"
-        scrolling="no"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=37.89137845393271%2C55.68090855834622%2C37.90414576884359%2C55.68507000182385&amp;layer=mapnik&amp;marker=55.68298933543484%2C37.89776211138815"
-      />
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=37.52460032701493%2C55.963670381636625%2C37.52779215574265%2C55.96471676097389&amp;layer=mapnik&amp;marker=55.96419357484192%2C37.526196241378784" style={{border: "1px solid black"}}>
+      </iframe>
+      <br/>
+      <small><a href="https://www.openstreetmap.org/?mlat=55.96419&amp;mlon=37.52620#map=19/55.96419/37.52620&amp;layers=N">Посмотреть более крупную карту</a></small>
     </div>
   )
 }
