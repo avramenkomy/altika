@@ -9,7 +9,8 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: 'none',
+    // display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignContent: 'center',
