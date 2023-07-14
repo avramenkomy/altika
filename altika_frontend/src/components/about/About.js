@@ -22,8 +22,18 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     textAlign: 'justify',
-    lineHeight: '2rem',
+    lineHeight: '1.8rem',
   },
+  list: {
+    margin: 0,
+    listStyleType: "none",
+    '& > li:before': {
+      content: "-",
+    },
+  },
+  item_key_word: {
+    fontWeight: 'bolder'
+  }
 }));
 
 
@@ -35,20 +45,74 @@ export default function About(props) {
     [classes.root_light] : !props.darkTheme
   });
 
+  const listStyle = clsx({
+    [classes.root]: true,
+    [classes.list]: true,
+  })
+
   return (
     <Paper className={rootStyle} square>
       <Container maxWidth={"md"}>
         <Typography variant="h4" gutterBottom className={classes.title}>
           О нашей компании
         </Typography>
-        <Typography variant="subtitle1" component="p" gutterBottom className={classes.content}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac euismod justo. Duis consequat nibh
-          vel est dignissim consequat. Mauris lobortis lobortis convallis. Pellentesque hendrerit iaculis justo,
-          nec rhoncus eros. Nam id leo nec eros dignissim posuere. Ut a ullamcorper nunc. Sed vel eros mollis,
-          vestibulum odio sit amet, tristique sapien. Vestibulum pellentesque eros id hendrerit faucibus. Donec
-          tortor orci, tincidunt vitae dolor nec, sodales malesuada neque. Ut maximus tortor quis nisl vehicula
-          vestibulum.
+
+        <Typography variant="subtitle1" component="p" className={classes.content}>
+          &#137;&#137;&#137;Автономная некоммерческая организация «Центр инженерно-технических и финансово-экономических
+          экспертиз «ЭКСПЕРТНОЕ БЮРО АЛЬТИКА» занимается проведением исследований в самых различных областях
+          судебно-экспертной деятельности, в частности в сферах экономики, лингвистики, фоноскопии,
+          исследования документов, трасологии, автотехнических, пожарно-технических и строительно-технических
+          и многих других видов экспертиз.
         </Typography>
+
+        <Typography variant="subtitle1" component="p" className={classes.content}>
+          &#137;&#137;&#137;Специалисты Экспертного бюро Альтика – это коллектив профессиональных судебных экспертов, имеющих
+          в т.ч. и два высших образования, в том числе по специальности «судебная экспертиза» с присвоенной
+          квалификацией «судебный эксперт». Специалисты постоянно проходят необходимую в работе сертификацию
+          и аккредитацию, а также повышают свой профессиональный уровень на курсах повышения квалификации и
+          семинарах по актуальным практическим и научным вопросам применения специальных знаний в ведущих
+          учебных заведениях страны.
+        </Typography>
+
+        <Typography variant="subtitle1" component="p" className={classes.content}>
+          &#137;&#137;&#137;Сотрудники Экспертного бюро Альтика обладают богатым опытом экспертной практики и высокой степень
+          квалификации для проведения исследований в рамках судебных и внесудебных исследований в вопросах,
+          требующих применений специальных знаний. 
+        </Typography>
+
+        {/* TODO: обновить верстку списка с маркером "-" */}
+
+        <Typography variant="subtitle1" component="ul" className={listStyle}>
+          &#137;&#137;&#137;Преимущества сотрудничества с АНО «Центр инженерно-технических и финансово-экономических
+          экспертиз «ЭКСПЕРТНОЕ БЮРО АЛЬТИКА»:
+          <Typography variant="subtitle1" component="li" className={classes.content}>
+            <span className={classes.item_key_word}>Законность.</span> Все виды работ в Экспертном бюро Альтика проводятся с соблюдением всех
+            актуальных нормативно правовых актов, методик исследования, разработанных Минюстом РФ,
+            МВД РФ с учетом особенностей их применения, а также в соответствие с существующими
+            стандартами оформления документации.
+          </Typography>
+
+          <Typography variant="subtitle1" component="li" className={classes.content}>
+            <span className={classes.item_key_word}>Профессионализм.</span> Все виды работ проводятся специалистами строго в соответствие с их
+            компетентностью. При этом, в связи с наличием специалистов с различным профильным
+            образованием, имеется возможность проведения комплексного исследования по различным
+            направлениям судебно-экспертной деятельности.
+          </Typography>
+
+          <Typography variant="subtitle1" component="li" className={classes.content}>
+            <span className={classes.item_key_word}>Коммуникабельность.</span> Специалисты бюро обладают большим опытом общения с представителями
+            различных структур, которые являются пользователями итоговой документации (заключение
+            эксперта, заключение специалиста, отчет об оценке и пр.). В том числе, защита своих заключений
+            в рамках судебно-процессуальных действий в различных инстанциях и поддержка отчетов об оценке
+            при необходимости получения Экспертизы на отчет.
+          </Typography>
+
+          <Typography variant="subtitle1" component="li" className={classes.content}>
+            <span className={classes.item_key_word}>Оперативность.</span> Все виды предоставляемых услуг могут быть оказаны с разумным
+            учетом дефицита времени для принятия управленческих решений.
+          </Typography>
+        </Typography>
+
       </Container>
     </Paper>
   )
