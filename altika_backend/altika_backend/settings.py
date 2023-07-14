@@ -27,32 +27,14 @@ REACT_APP_PATH = os.path.join(BASE_DIR.parent, 'altika_frontend') # корень
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-# Development status
-DEVELOP = os.environ['DEVELOP']
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
 
-ALLOWED_HOSTS = ['altika-expert.ru', 'www.altika-expert.ru', '*']
-if not DEVELOP: CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
-if DEVELOP:
-    INSTALLED_APPS = [
-        'django.contrib.admin',
-        'django.contrib.auth',
-        'django.contrib.contenttypes',
-        'django.contrib.sessions',
-        'django.contrib.messages',
-        'django.contrib.staticfiles',
-        # library
-        'rest_framework',
-        # my_apps
-        'send_email',
-    ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
