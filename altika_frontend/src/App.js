@@ -8,8 +8,8 @@ import StepByWork from './components/stepByWork/StepByWork';
 // import News from './components/news/News';
 import ReasonsForExpertise from './components/reasons/ReasonsComponent';
 import FooterComponent from './components/footer/FooterComponent';
-import License from './components/licenseDocuments/LicenseDocuments';
-import Notes from './components/notes/Notes';
+// import License from './components/licenseDocuments/LicenseDocuments';
+// import Notes from './components/notes/Notes';
 
 
 function App() {
@@ -27,9 +27,9 @@ function App() {
         <Services />
         <StepByWork />
         <ReasonsForExpertise />
-        <License />
-        {/* <News /> */} {/* TODO: Скрытый компонент на стадии разработки */}
-        <Notes />
+        {/* <License /> */} {/* TODO: Скрытый компонент на стадии разработки */}
+        {/*<News />*/} {/* TODO: Скрытый компонент на стадии разработки */}
+        {/* <Notes /> */} {/* TODO: Скрытый компонент на стадии разработки */}
       </main>
       <footer>
         <div id='contacts' />
