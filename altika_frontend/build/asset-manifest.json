@@ -1,31 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.0998f093.css",
-    "main.js": "/static/js/main.4e5be505.js",
-    "static/media/license_3.jpeg": "/static/media/license_3.5345167a5810dfa9471e.jpeg",
-    "static/media/license_8.jpeg": "/static/media/license_8.5345167a5810dfa9471e.jpeg",
+    "main.css": "/static/css/main.88c2ab26.css",
+    "main.js": "/static/js/main.da5c6d2f.js",
     "static/media/fucking_with_laptop.jpeg": "/static/media/fucking_with_laptop.b998c0f70e05e51df49b.jpeg",
     "static/media/expert_man.jpeg": "/static/media/expert_man.ba5ea4231861d8e34987.jpeg",
-    "static/media/license_1.jpeg": "/static/media/license_1.29e05ad8e5b36e331819.jpeg",
-    "static/media/license_5.jpeg": "/static/media/license_5.29e05ad8e5b36e331819.jpeg",
     "static/media/natural-paper.png": "/static/media/natural-paper.4059dca9113a0926a9cd.png",
-    "static/media/license_2.jpeg": "/static/media/license_2.aa33852bf342edd592b5.jpeg",
-    "static/media/license_6.jpeg": "/static/media/license_6.aa33852bf342edd592b5.jpeg",
     "static/media/lupa_400x400.jpeg": "/static/media/lupa_400x400.0155b3a189b9c5627a39.jpeg",
     "static/media/molotok.jpeg": "/static/media/molotok.5acccf92c826ba9578c2.jpeg",
     "static/media/transport.jpeg": "/static/media/transport.5b93f4e564eb2b581010.jpeg",
     "static/media/calculator.jpeg": "/static/media/calculator.8beba5e49b425988c67e.jpeg",
-    "static/media/license_4.jpeg": "/static/media/license_4.210b6591ce806ea17316.jpeg",
-    "static/media/license_7.jpeg": "/static/media/license_7.210b6591ce806ea17316.jpeg",
     "static/media/fingers_print.jpeg": "/static/media/fingers_print.1bbdec153a1794dfe4ff.jpeg",
     "static/media/home.jpg": "/static/media/home.d09044409b2b136b4cfd.jpg",
     "static/media/default_logo.jpeg": "/static/media/default_logo.a43b11a3b70aff6cc4cc.jpeg",
     "index.html": "/index.html",
-    "main.0998f093.css.map": "/static/css/main.0998f093.css.map",
-    "main.4e5be505.js.map": "/static/js/main.4e5be505.js.map"
+    "main.88c2ab26.css.map": "/static/css/main.88c2ab26.css.map",
+    "main.da5c6d2f.js.map": "/static/js/main.da5c6d2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.0998f093.css",
-    "static/js/main.4e5be505.js"
+    "static/css/main.88c2ab26.css",
+    "static/js/main.da5c6d2f.js"
   ]
 }
