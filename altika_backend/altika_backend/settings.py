@@ -27,11 +27,14 @@ REACT_APP_PATH = os.path.join(BASE_DIR.parent, 'altika_frontend') # корень
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
+# Development status
+SERVER_STATUS = os.environ['SERVER_STATUS']
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True if SERVER_STATUS == 'develop' else False
 
 ALLOWED_HOSTS = ['*']
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True if SERVER_STATUS == 'production' else False
 
 
 # Application definition
@@ -45,13 +48,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # library
     'rest_framework',
-    'corsheaders',
+    # 'corsheaders',
     # my_apps
     'send_email',
 ]
 
+if SERVER_STATUS == 'production': INSTALLED_APPS.append('corsheaders')
+
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,6 +65,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+if SERVER_STATUS == 'production': MIDDLEWARE.append('corsheaders.middleware.CorsMiddleware')
 
 ROOT_URLCONF = 'altika_backend.urls'
 
@@ -85,14 +92,14 @@ WSGI_APPLICATION = 'altika_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES_DEV = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
-DATABASES = {
+DATABASES_PRODUCTION = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'u1651207_default',
@@ -101,6 +108,8 @@ DATABASES = {
         'HOST': 'localhost',
     }
 }
+
+DATABASES = DATABASES_DEV if SERVER_STATUS == 'develop' else DATABASES_PRODUCTION
 
 
 # Password validation
