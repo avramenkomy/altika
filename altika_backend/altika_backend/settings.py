@@ -27,18 +27,17 @@ REACT_APP_PATH = os.path.join(BASE_DIR.parent, 'altika_frontend') # корень
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-#develop status
+# Development status
 DEVELOP = os.environ['DEVELOP']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = DEVELOP
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['altika-expert.ru', 'www.altika-expert.ru', '*']
 if not DEVELOP: CORS_ORIGIN_ALLOW_ALL = True
 
-
 # Application definition
-if not DEVELOP:
+if DEVELOP:
     INSTALLED_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',
@@ -48,13 +47,11 @@ if not DEVELOP:
         'django.contrib.staticfiles',
         # library
         'rest_framework',
-        'corsheaders',
         # my_apps
         'send_email',
     ]
 
     MIDDLEWARE = [
-        'corsheaders.middleware.CorsMiddleware',
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.middleware.common.CommonMiddleware',
@@ -73,11 +70,13 @@ else:
         'django.contrib.staticfiles',
         # library
         'rest_framework',
+        'corsheaders',
         # my_apps
         'send_email',
     ]
 
     MIDDLEWARE = [
+        'corsheaders.middleware.CorsMiddleware',
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.middleware.common.CommonMiddleware',
@@ -105,11 +104,12 @@ TEMPLATES = [
     },
 ]
 
-if not DEVELOP: WSGI_APPLICATION = 'altika_backend.wsgi.application'
+WSGI_APPLICATION = 'altika_backend.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
 if DEVELOP:
     DATABASES = {
         'default': {
