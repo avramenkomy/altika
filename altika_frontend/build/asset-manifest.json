@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.88c2ab26.css",
-    "main.js": "/static/js/main.9f482ae5.js",
+    "main.js": "/static/js/main.793ea925.js",
     "static/media/fucking_with_laptop.jpeg": "/static/media/fucking_with_laptop.b998c0f70e05e51df49b.jpeg",
+    "static/media/auto_technical_expertise.jpg": "/static/media/auto_technical_expertise.7a5e364ac9b7cc45dabd.jpg",
     "static/media/expert_man.jpeg": "/static/media/expert_man.ba5ea4231861d8e34987.jpeg",
+    "static/media/fire_technical_expertise.jpg": "/static/media/fire_technical_expertise.6f97e042b7eb5652b0c2.jpg",
+    "static/media/finance_econimic_expertise.jpg": "/static/media/finance_econimic_expertise.3b36d07426272bab0d26.jpg",
+    "static/media/linguistic_expertise.jpg": "/static/media/linguistic_expertise.d62acf4e007d363aa186.jpg",
     "static/media/natural-paper.png": "/static/media/natural-paper.4059dca9113a0926a9cd.png",
-    "static/media/lupa_400x400.jpeg": "/static/media/lupa_400x400.0155b3a189b9c5627a39.jpeg",
-    "static/media/molotok.jpeg": "/static/media/molotok.5acccf92c826ba9578c2.jpeg",
-    "static/media/transport.jpeg": "/static/media/transport.5b93f4e564eb2b581010.jpeg",
-    "static/media/calculator.jpeg": "/static/media/calculator.8beba5e49b425988c67e.jpeg",
-    "static/media/fingers_print.jpeg": "/static/media/fingers_print.1bbdec153a1794dfe4ff.jpeg",
-    "static/media/home.jpg": "/static/media/home.d09044409b2b136b4cfd.jpg",
+    "static/media/engineering_technical_expertise.jpg": "/static/media/engineering_technical_expertise.0a495ecf7e3fa8326e2c.jpg",
+    "static/media/handwriting_expertise.jpg": "/static/media/handwriting_expertise.4ee1e3387d9c95050ea3.jpg",
     "static/media/default_logo.jpeg": "/static/media/default_logo.a43b11a3b70aff6cc4cc.jpeg",
     "index.html": "/index.html",
     "main.88c2ab26.css.map": "/static/css/main.88c2ab26.css.map",
-    "main.9f482ae5.js.map": "/static/js/main.9f482ae5.js.map"
+    "main.793ea925.js.map": "/static/js/main.793ea925.js.map"
   },
   "entrypoints": [
     "static/css/main.88c2ab26.css",
-    "static/js/main.9f482ae5.js"
+    "static/js/main.793ea925.js"
   ]
 }
