@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.88c2ab26.css",
-    "main.js": "/static/js/main.da5c6d2f.js",
+    "main.js": "/static/js/main.9f482ae5.js",
     "static/media/fucking_with_laptop.jpeg": "/static/media/fucking_with_laptop.b998c0f70e05e51df49b.jpeg",
     "static/media/expert_man.jpeg": "/static/media/expert_man.ba5ea4231861d8e34987.jpeg",
     "static/media/natural-paper.png": "/static/media/natural-paper.4059dca9113a0926a9cd.png",
@@ -14,10 +14,10 @@
     "static/media/default_logo.jpeg": "/static/media/default_logo.a43b11a3b70aff6cc4cc.jpeg",
     "index.html": "/index.html",
     "main.88c2ab26.css.map": "/static/css/main.88c2ab26.css.map",
-    "main.da5c6d2f.js.map": "/static/js/main.da5c6d2f.js.map"
+    "main.9f482ae5.js.map": "/static/js/main.9f482ae5.js.map"
   },
   "entrypoints": [
     "static/css/main.88c2ab26.css",
-    "static/js/main.da5c6d2f.js"
+    "static/js/main.9f482ae5.js"
   ]
 }
