@@ -5,12 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import ServiceCard from './ServiceCard';
 import ServicesAccordion from './ServiceAccordion';
 
-import decoration0 from '../../resources/img/types_of_expertise/calculator.jpeg';
-import decoration1 from '../../resources/img/types_of_expertise/fingers_print.jpeg';
-import decoration2 from '../../resources/img/types_of_expertise/home.jpg';
-import decoration3 from '../../resources/img/types_of_expertise/lupa_400x400.jpeg';
-import decoration4 from '../../resources/img/types_of_expertise/molotok.jpeg';
-import decoration5 from '../../resources/img/types_of_expertise/transport.jpeg';
+import decoration0 from '../../resources/img/types_of_expertise/handwriting_expertise.jpg';
+import decoration1 from '../../resources/img/types_of_expertise/handwriting_expertise.jpg';
+import decoration2 from '../../resources/img/types_of_expertise/handwriting_expertise.jpg';
+import decoration3 from '../../resources/img/types_of_expertise/handwriting_expertise.jpg';
+import decoration4 from '../../resources/img/types_of_expertise/handwriting_expertise.jpg';
+import decoration5 from '../../resources/img/types_of_expertise/handwriting_expertise.jpg';
 
 const serviceTypes = [
   {id: 0, title: 'Заключение эксперта', price: 'от 10 000 руб.', url: decoration0, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac euismod justo. Duis consequat nibhvel est dignissim consequat. Mauris lobortis lobortis convallis. Pellentesque hendrerit iaculis justo, nec rhoncus eros. Nam id leo nec eros dignissim posuere.'},
