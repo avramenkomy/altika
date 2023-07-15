@@ -39,13 +39,13 @@ export default function NavBar() {
           </AnchorLink>
         </Grid>
         <Grid item xs={12} md={3}>
-          <AnchorLink className={classes.link} offset='100' href="#services">
-            <Typography variant="h6">Услуги</Typography>
+          <AnchorLink className={classes.link} offset='100' href="#expertise_types">
+            <Typography variant="h6">Виды экспертиз</Typography>
           </AnchorLink>
         </Grid>
         <Grid item xs={12} md={3}>
-          <AnchorLink className={classes.link} offset='100' href="#expertise_types">
-            <Typography variant="h6">Виды экспертиз</Typography>
+          <AnchorLink className={classes.link} offset='100' href="#services">
+            <Typography variant="h6">Услуги</Typography>
           </AnchorLink>
         </Grid>
         <Grid item xs={12} md={3}>
