@@ -26,28 +26,35 @@ function ContactsComponent() {
           <ListItemIcon>
             <PhoneIcon color="secondary"/>
           </ListItemIcon>
-          <ListItemText primary="+7 (123) 456-78-90" />
+          <ListItemText primary="+7 (985) 126-69-66" />
+        </ListItem>
+
+        <ListItem>
+          <ListItemIcon>
+            <PhoneIcon color="secondary"/>
+          </ListItemIcon>
+          <ListItemText primary="+7 (916) 634-04-07" />
         </ListItem>
 
         <ListItem>
           <ListItemIcon>
             <MailOutlineIcon color="secondary" />
           </ListItemIcon>
-          <ListItemText primary="example@domain.com" />
+          <ListItemText primary="ano-altika@mail.ru" />
         </ListItem>
 
         <ListItem>
           <ListItemIcon>
             <LocationOnIcon color="secondary" />
           </ListItemIcon>
-          <ListItemText primary="МО, г.Люберцы, ул. Инициативная, д.10 стр.12" />
+          <ListItemText primary="МО, г.Долгопрудный, ул. Набережная, д.33 оф.61" />
         </ListItem>
 
         <ListItem>
           <ListItemIcon>
             <QueryBuilderIcon color="secondary" />
           </ListItemIcon>
-          <ListItemText primary="Пн.-Пт.: 10.00-18.00, Сб.-Вс.: Выходной" />
+          <ListItemText primary="Пн.-Пт.: 10.00-17.00, Сб.-Вс.: Выходной" />
         </ListItem>
       </List>
   );

@@ -48,7 +48,7 @@ export default function CallUs() {
           </Box>
           <Box className={classes.wrapperContacts}>
             <EmailIcon fontSize="small" className={classes.contacts}/>
-            <Typography component="span" variant="body2">example@domain.com</Typography>
+            <Typography component="span" variant="body2">ano-altika@mail.ru</Typography>
           </Box>
         </Grid>
       </Grid>
