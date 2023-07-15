@@ -65,8 +65,8 @@ function FooterComponent() {
       <Grid container className={classes.bottom_container}>
         <Container>
           <Typography className={classes.bottom_text} variant="body2">
-            ООО "Альтика и далее полное наименование"<br />
-            ИНН 123456788, КПП 123456788, ОГРН 123456788<br />
+            АНО «Экспертное Бюро АЛЬТИКА»<br />
+            ИНН 5047266527, КПП 5047011001, ОГРН 1225000088290 от 16.08.2022 г.<br />
           </Typography>
           
           <Typography className={classes.bottom_text} variant="body2">&#169;&nbsp;2022 Все права защищены</Typography>
