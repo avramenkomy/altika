@@ -67,15 +67,15 @@ function Intro () {
           <div className={classes.dark_shadow} />
           <Grid container direction="column" className={classes.wrapper} alignItems="center">
 
-            <Grid item xs={6} sm={8} className={classes.items}>
-              <Typography className={classes.title} variant="h2" component="h1" color="secondary">
-                Услуги независимой экспертизы и оценки
+            <Grid item xs={8} sm={10} className={classes.items}>
+              <Typography className={classes.title} variant="h3" component="h1" color="secondary">
+                Центр инженерно-технических экспертиз, финансово-экономических экспертиз и оценочных услуг
               </Typography>
             </Grid>
 
             <Grid item xs={6} sm={8} className={classes.items}>
               <Typography className={classes.subtitle} variant="subtitle1" color="secondary" gutterBottom paragraph>
-                Задайте вопросы менеджеру по телефону 8 800 333 22 33
+                Задайте вопросы по телефону 8 800 333 22 33
               </Typography>
             </Grid>
 
