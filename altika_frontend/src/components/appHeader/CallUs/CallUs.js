@@ -44,7 +44,7 @@ export default function CallUs() {
         <Grid item>
           <Box className={classes.wrapperContacts}>
             <CallIcon fontSize="small" className={classes.contacts}/>
-            <Typography component="span" variant="body2">+7 (123) 456-78-90</Typography>
+            <Typography component="span" variant="body2">+7 (985) 126-69-66</Typography>
           </Box>
           <Box className={classes.wrapperContacts}>
             <EmailIcon fontSize="small" className={classes.contacts}/>
