@@ -68,11 +68,14 @@ function ServiceCard({title, price, description, url}) {
           <div className={classes.service__title}>
             <Typography gutterBottom variant="h4" component="h2">{title}</Typography>
           </div>
-          <Divider />
-          <div className={classes.service__price}>
-            <Typography gutterBottom variant="h6" component="span">Стоимость услуги: </Typography>
-            <Typography gutterBottom variant="h6" component="span">{price}</Typography>
-          </div>
+          {price &&
+          <React.Fragment> 
+            <Divider />
+            <div className={classes.service__price}>            
+              <Typography gutterBottom variant="h6" component="span">Стоимость: </Typography>
+              <Typography gutterBottom variant="h6" component="span">{price}</Typography>
+            </div>
+          </React.Fragment>}
           <Divider />
           <div className={classes.actionBtn}>
             <Button onClick={ () => handleOpenFeedbackModal(true) } variant="contained" color="primary" size="small">Оставить заявку</Button>
