@@ -2,14 +2,17 @@ import React from 'react';
 import { makeStyles} from '@material-ui/core/styles';
 
 import './logo.css'
-import LogoImage from '../../../resources/img/default_logo.jpeg';
+import LogoImage from '../../../resources/img/logos/logo_white.svg';
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    marginLeft: theme.spacing(1),
+    marginTop: theme.spacing(0.5),
+    marginLeft: theme.spacing(5),
   },
   img: {
     objectFit: 'cover',
+    width: '50px',
+    height: 'auto',
     maxWidth: '140px',
   }
 }));
