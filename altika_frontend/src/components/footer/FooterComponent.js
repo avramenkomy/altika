@@ -69,7 +69,7 @@ function FooterComponent() {
             ИНН 5047266527, КПП 5047011001, ОГРН 1225000088290 от 16.08.2022 г.<br />
           </Typography>
           
-          <Typography className={classes.bottom_text} variant="body2">&#169;&nbsp;2022 Все права защищены</Typography>
+          <Typography className={classes.bottom_text} variant="body2">&#169;&nbsp;2023 Все права защищены</Typography>
         </Container>
       </Grid>
     </Paper>
