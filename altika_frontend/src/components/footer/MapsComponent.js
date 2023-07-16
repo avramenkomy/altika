@@ -19,10 +19,11 @@ function MapsComponent({width, height}) {
         title="openstreetmap"
         width={width}
         height={height}
-        src="https://www.openstreetmap.org/export/embed.html?bbox=37.52030611038209%2C55.96042597546203%2C37.53219366073609%2C55.96785422810945&amp;layer=mapnik&amp;marker=55.96414028001831%2C37.52624988555908" style={{border: "1px solid #245F80"}}>
-      </iframe>
+        src="https://www.openstreetmap.org/export/embed.html?bbox=37.51946926116944%2C55.96045600360553%2C37.53292322158814%2C55.96788425048958&amp;layer=mapnik&amp;marker=55.96417330780496%2C37.526196241378784"
+        style={{ border: '1px solid #245F80'}}
+      />
       <br/>
-      {/* <small><a href="https://www.openstreetmap.org/?mlat=55.96419&amp;mlon=37.52620#map=19/55.96419/37.52620&amp;layers=N">Посмотреть более крупную карту</a></small> */}
+      <small><a href="https://www.openstreetmap.org/?mlat=55.96417&amp;mlon=37.52620#map=17/55.96417/37.52620&amp;layers=N">Посмотреть более крупную карту</a></small>
     </div>
   )
 }
