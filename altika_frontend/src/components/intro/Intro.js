@@ -43,6 +43,14 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
   },
+  tel_link: {
+    color: 'white',
+    textDecoration: 'none',
+    '& :visited': {
+      color: 'white',
+      textDecoration: 'none'
+    }
+  }
 }));
 
 function Intro () {
@@ -75,7 +83,7 @@ function Intro () {
 
             <Grid item xs={8} sm={8} className={classes.items}>
               <Typography className={classes.subtitle} variant="subtitle1" color="secondary" gutterBottom paragraph>
-                Задайте вопросы по телефону 8 800 333 22 33
+                Задайте вопросы по телефону <a href="tel:+79851266966" className={classes.tel_link}>8 (985) 126-69-66</a>
               </Typography>
             </Grid>
 
