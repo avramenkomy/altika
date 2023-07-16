@@ -28,7 +28,7 @@ function ExpertiseCard(props) {
         title={props.title}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
+        <Typography gutterBottom variant="h5" component="h2" align="center">
           {props.title}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
