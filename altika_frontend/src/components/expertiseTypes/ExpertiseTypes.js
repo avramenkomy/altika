@@ -41,7 +41,7 @@ function ExpertiseTypes() {
         <Typography variant="h5" className={classes.title}>
           Виды экспертиз
         </Typography>
-        <Grid container spacing={1}>
+        <Grid container spacing={2}>
           {
             expertiseTypes.map((item) => {
               return (
