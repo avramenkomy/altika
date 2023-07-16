@@ -10,6 +10,7 @@ import ReasonsForExpertise from './components/reasons/ReasonsComponent';
 import FooterComponent from './components/footer/FooterComponent';
 // import License from './components/licenseDocuments/LicenseDocuments';
 // import Notes from './components/notes/Notes';
+import Evaluations from './components/evaluations/Evaluations';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <About />
         <div id="expertise_types" />
         <ExpertiseTypes />
+        <Evaluations />
         <div id="services" />
         <Services />
         <StepByWork />
