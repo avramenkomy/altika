@@ -27,6 +27,11 @@ const theme = createTheme({
           fontSize: '20px',
         },
       },
+      h3: {
+        '@media (max-width: 501px)': {
+          fontSize: '30px',
+        }
+      },
       h6: {
         fontSize: '1rem',
         '@media (min-width: 1280px)': {
