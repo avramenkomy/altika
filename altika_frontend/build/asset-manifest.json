@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.88c2ab26.css",
-    "main.js": "/static/js/main.793ea925.js",
+    "main.js": "/static/js/main.dc5533c8.js",
     "static/media/fucking_with_laptop.jpeg": "/static/media/fucking_with_laptop.b998c0f70e05e51df49b.jpeg",
     "static/media/auto_technical_expertise.jpg": "/static/media/auto_technical_expertise.7a5e364ac9b7cc45dabd.jpg",
     "static/media/expert_man.jpeg": "/static/media/expert_man.ba5ea4231861d8e34987.jpeg",
@@ -9,15 +9,18 @@
     "static/media/finance_econimic_expertise.jpg": "/static/media/finance_econimic_expertise.3b36d07426272bab0d26.jpg",
     "static/media/linguistic_expertise.jpg": "/static/media/linguistic_expertise.d62acf4e007d363aa186.jpg",
     "static/media/natural-paper.png": "/static/media/natural-paper.4059dca9113a0926a9cd.png",
+    "static/media/evaluation_business.jpg": "/static/media/evaluation_business.127d3911c566d674217f.jpg",
+    "static/media/evaluation_car.jpg": "/static/media/evaluation_car.66b72920d2d2377a04e9.jpg",
     "static/media/engineering_technical_expertise.jpg": "/static/media/engineering_technical_expertise.0a495ecf7e3fa8326e2c.jpg",
+    "static/media/evaluation_home.jpg": "/static/media/evaluation_home.b90e39e6601aa75533b4.jpg",
     "static/media/handwriting_expertise.jpg": "/static/media/handwriting_expertise.4ee1e3387d9c95050ea3.jpg",
-    "static/media/default_logo.jpeg": "/static/media/default_logo.a43b11a3b70aff6cc4cc.jpeg",
+    "static/media/logo_white.svg": "/static/media/logo_white.3a7a8e8ead8f2618fe9486f41ac8fca6.svg",
     "index.html": "/index.html",
     "main.88c2ab26.css.map": "/static/css/main.88c2ab26.css.map",
-    "main.793ea925.js.map": "/static/js/main.793ea925.js.map"
+    "main.dc5533c8.js.map": "/static/js/main.dc5533c8.js.map"
   },
   "entrypoints": [
     "static/css/main.88c2ab26.css",
-    "static/js/main.793ea925.js"
+    "static/js/main.dc5533c8.js"
   ]
 }
