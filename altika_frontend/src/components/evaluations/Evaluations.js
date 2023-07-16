@@ -7,8 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import EvaluationCard from './EvaluationCard';
 
 import decoration0 from '../../resources/img/evaluations/evaluation_home.jpg';
-import decoration2 from '../../resources/img/evaluations/evaluation_car.jpg';
-import decoration1 from '../../resources/img/evaluations/evaluation_business.jpg';
+import decoration1 from '../../resources/img/evaluations/evaluation_car.jpg';
+import decoration2 from '../../resources/img/evaluations/evaluation_business.jpg';
 
 const evaluations = [
   {id: 0, title: 'Оценка недвижимого имущества', url: decoration0, description: ['Оценка жилой недвижимости', 'Оценка загородной недвижимости (земельный участок, дом, дача, коттедж, строения на земельном участке, являющиеся неотъемлемыми улучшениями)', 'Оценка коммерческой недвижимости (торговые, офисные, производственно-складские здания, помещения и комплексы)', 'Оценка незавершённого строительства', 'Оценка сооружений', 'Оценка арендной платы коммерческой недвижимости', 'Оценка стоимости и аренды сервитутов' ]},
