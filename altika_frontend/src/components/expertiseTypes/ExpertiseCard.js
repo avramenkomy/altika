@@ -31,7 +31,7 @@ function ExpertiseCard(props) {
         <Typography gutterBottom variant="h5" component="h2" align="center">
           {props.title}
         </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="body2" color="textSecondary" component="p" style={{ textAlign: 'justify' }}>
           {props.description}
         </Typography>
       </CardContent>

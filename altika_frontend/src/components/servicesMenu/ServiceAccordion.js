@@ -91,7 +91,7 @@ function ServicesAccordion({serviceTypes}) {
               backgroundPosition: 'center',
             }}>
               <div className={classes.dark_shadow} />
-              <Typography>
+              <Typography style={{ textAlign: 'justify' }}>
                 {service.description}
               </Typography>
             </AccordionDetails>

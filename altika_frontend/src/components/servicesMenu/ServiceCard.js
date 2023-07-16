@@ -95,7 +95,7 @@ function ServiceCard({title, price, description, url}) {
               }}
             >
               <div className="title__content">
-                <Typography component="p" variant="h6">
+                <Typography component="p" variant="h6" style={{ textAlign: 'justify' }}>
                   {description}
                 </Typography>
               </div>
