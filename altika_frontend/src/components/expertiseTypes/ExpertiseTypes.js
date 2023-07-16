@@ -13,13 +13,10 @@ import decoration5 from '../../resources/img/types_of_expertise/engineering_tech
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
+    // paddingTop: theme.spacing(2),
+    // paddingBottom: theme.spacing(2),
   },
   title: {
-    textAlign: 'center',
-  },
-  wrapper: {
     textAlign: 'center',
   },
 }));
@@ -43,7 +40,7 @@ function ExpertiseTypes() {
         <Typography variant="h5" className={classes.title}>
           Виды экспертиз
         </Typography>
-        <Grid container>
+        <Grid container spacing={2}>
           {
             expertiseTypes.map((item) => {
               return (
