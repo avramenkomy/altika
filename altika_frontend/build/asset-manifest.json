@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.88c2ab26.css",
-    "main.js": "/static/js/main.dc5533c8.js",
+    "main.js": "/static/js/main.e54053a3.js",
     "static/media/fucking_with_laptop.jpeg": "/static/media/fucking_with_laptop.b998c0f70e05e51df49b.jpeg",
     "static/media/auto_technical_expertise.jpg": "/static/media/auto_technical_expertise.7a5e364ac9b7cc45dabd.jpg",
     "static/media/expert_man.jpeg": "/static/media/expert_man.ba5ea4231861d8e34987.jpeg",
@@ -17,10 +17,10 @@
     "static/media/logo_white.svg": "/static/media/logo_white.3a7a8e8ead8f2618fe9486f41ac8fca6.svg",
     "index.html": "/index.html",
     "main.88c2ab26.css.map": "/static/css/main.88c2ab26.css.map",
-    "main.dc5533c8.js.map": "/static/js/main.dc5533c8.js.map"
+    "main.e54053a3.js.map": "/static/js/main.e54053a3.js.map"
   },
   "entrypoints": [
     "static/css/main.88c2ab26.css",
-    "static/js/main.dc5533c8.js"
+    "static/js/main.e54053a3.js"
   ]
 }
