@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     marginRight: 'auto',
     textAlign: 'center',
-    paddingBottom: theme.spacing(3),
+    // paddingBottom: theme.spacing(3),
   },
   content__mobile: {
     width: '100%',
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 function ReasonsForExpertise() {
-  
+
   const matches800 = useMediaQuery('(min-width:800px)');
   const classes = useStyles();
 
@@ -108,16 +108,16 @@ function ReasonsForExpertise() {
             )
           })}
         </Paper>
-        <Paper className={classes.warning_block}>
+        {/* <Paper className={classes.warning_block}>
           <Typography variant="h6" component="p">ВАЖНО!</Typography>
           <Typography variant="subtitle1" component="p">
-            Экспертиза обладает юридической силой. 
-            За ошибки и подделку результатов экспертизы Вы несете уголовную ответственность. 
+            Экспертиза обладает юридической силой.
+            За ошибки и подделку результатов экспертизы Вы несете уголовную ответственность.
             Поэтому следует доверять проведение экспертиз только компаниям, обладающим лицензией
             на право заниматься экспертной и оценочной деятельностью.
           </Typography>
-        </Paper>
-      </Paper>      
+        </Paper> */}
+      </Paper>
     </Paper>
   )
 }
